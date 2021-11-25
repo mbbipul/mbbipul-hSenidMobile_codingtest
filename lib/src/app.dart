@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:hsenidmobile_coding_task/src/ui/utils/hex_color.dart';
+import 'package:hsenidmobile_coding_task/src/ui/views/myChart/myChart.view.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -49,6 +50,7 @@ class App extends StatelessWidget {
           showUnselectedLabels: true,
           backgroundColor: HexColor('#FAFCFC'),
         ),
+        body: const MyChart(),
       ),
     );
   }
