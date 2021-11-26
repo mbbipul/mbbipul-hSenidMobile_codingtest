@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:hsenidmobile_coding_task/src/ui/utils/chart_datas.dart';
+import 'package:hsenidmobile_coding_task/src/ui/utils/chart.dart';
 import 'package:hsenidmobile_coding_task/src/ui/views/myChart/widgets/chart_item.dart';
 
 class Charts extends StatelessWidget {
-  const Charts({Key? key}) : super(key: key);
+  final List<Chart> charts;
+  final double spaceBetween;
+
+  const Charts({Key? key, required this.charts, this.spaceBetween = 0})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemBuilder: (BuildContext context, int index) =>
-          ChartItem(chartDatas[index]),
-      itemCount: chartDatas.length,
+      shrinkWrap: true,
+      itemBuilder: (BuildContext context, int index) => Card(
+        child: Padding(
+          padding: const EdgeInsets.all(15),
+          child: ChartItem(
+            data: charts[index],
+          ),
+        ),
+        margin: EdgeInsets.only(bottom: spaceBetween),
+      ),
+      itemCount: charts.length,
     );
   }
 }

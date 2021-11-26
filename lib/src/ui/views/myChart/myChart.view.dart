@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hsenidmobile_coding_task/src/ui/utils/chart_datas.dart';
 import 'package:hsenidmobile_coding_task/src/ui/views/myChart/widgets/charts.dart';
 import './widgets/header.dart';
 
@@ -8,10 +9,19 @@ class MyChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const <Widget>[
-        ChartHeader(),
+      children: <Widget>[
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: ChartHeader(),
+        ),
         Flexible(
-          child: Charts(),
+          child: Charts(
+            charts: chartDatas1,
+            spaceBetween: 10,
+          ),
+        ),
+        Flexible(
+          child: Charts(charts: chartDatas2),
         ),
       ],
     );

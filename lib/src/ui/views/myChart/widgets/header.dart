@@ -6,24 +6,27 @@ class ChartHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.transparent,
-      elevation: 10,
-      shadowColor: Colors.grey,
-      margin: const EdgeInsets.all(8),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.only(top: 20, bottom: 20),
-        child: const Center(
-          child: Text('My Chart'),
-        ),
-        decoration: BoxDecoration(
-          color: HexColor('#F7F7F7'),
-        ),
-      ),
+    return Center(
+      child: Card(
+          elevation: 20,
+          color: HexColor("#F7F7F7"),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: const SizedBox(
+            child: Center(
+              child: Padding(
+                padding: EdgeInsets.all(15),
+                child: Text(
+                  'My Charts',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          )),
     );
   }
 }
