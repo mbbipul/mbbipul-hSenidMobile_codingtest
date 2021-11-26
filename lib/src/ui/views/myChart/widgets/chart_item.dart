@@ -32,12 +32,23 @@ class _ChartItemState extends State<ChartItem> {
       const SizedBox(
         width: 60,
       ),
-      Text(root.title, style: const TextStyle(fontSize: 20)),
+      Text(
+        root.title,
+        style: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     ];
 
     if (root.icon == "") {
       row = <Widget>[
-        Text(root.title),
+        Text(
+          root.title,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ];
     }
     return ExpansionTile(

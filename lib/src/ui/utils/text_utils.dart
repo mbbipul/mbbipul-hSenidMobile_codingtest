@@ -1,5 +1,6 @@
 import 'dart:math';
 
+// to generate random string with fixed length
 String generateRandomString(int len) {
   var r = Random();
   const _chars =

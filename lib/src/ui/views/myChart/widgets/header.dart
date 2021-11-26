@@ -10,6 +10,7 @@ class ChartHeader extends StatelessWidget {
       child: Card(
           elevation: 20,
           color: HexColor("#F7F7F7"),
+          margin: const EdgeInsets.all(10),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
           ),
