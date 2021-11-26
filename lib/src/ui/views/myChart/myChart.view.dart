@@ -20,9 +20,6 @@ class MyChart extends StatelessWidget {
             spaceBetween: 10,
           ),
         ),
-        Flexible(
-          child: Charts(charts: chartDatas2),
-        ),
       ],
     );
   }

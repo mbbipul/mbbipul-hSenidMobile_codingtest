@@ -19,7 +19,7 @@ class Charts extends StatelessWidget {
             data: charts[index],
           ),
         ),
-        margin: EdgeInsets.only(bottom: spaceBetween),
+        margin: EdgeInsets.only(bottom: charts[index].spaceing ?? 0),
       ),
       itemCount: charts.length,
     );
